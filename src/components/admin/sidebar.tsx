@@ -15,20 +15,26 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import { adminSidebarLinks } from "@/lib/links";
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const { state } = useSidebar();
 
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
+            <SidebarMenuButton size="lg" asChild tooltip="Home">
               <Link href="/dashboard">
-                <Image src="/logo.svg" alt="Logo" width={120} height={32} />
+                {state === "collapsed" ? (
+                  <Image src="/logo-short.svg" alt="Logo" width={32} height={32} />
+                ) : (
+                  <Image src="/logo.svg" alt="Logo" width={120} height={32} />
+                )}
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

@@ -64,7 +64,11 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="right">
             <SheetHeader>
-              <SheetTitle>Menu</SheetTitle>
+              <SheetTitle>
+                <Link href="/">
+                  <Image src="/logo-short.svg" alt="Logo" width={32} height={32} />
+                </Link>
+              </SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col gap-1 px-2 py-4">
               {websiteNavLinks.map((link) => (
