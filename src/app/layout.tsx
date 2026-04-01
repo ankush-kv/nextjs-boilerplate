@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
-import "./globals.css";
+import { Manrope } from "next/font/google";
+
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
-const manrope = Manrope({subsets:['latin'],variable:'--font-sans'});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-sans' });
 export const metadata: Metadata = {
   title: "Nextjs boilerplate",
   description: "A boilerplate for Next.js projects with TypeScript, Tailwind CSS, and more.",
 };
 
-export default function RootLayout({  children}: Readonly<{  children: React.ReactNode;}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en" className={cn(inter.variable, "font-sans", manrope.variable)}>
+    <html lang="en" className={cn(manrope.variable, "font-sans")}>
       <body>{children}</body>
     </html>
   );
