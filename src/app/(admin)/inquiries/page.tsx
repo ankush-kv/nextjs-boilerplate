@@ -21,8 +21,7 @@ export default function InquiriesPage() {
 
       <Separator />
 
-      <div className="rounded-md border">
-        <Table>
+      <Table>
           <TableHeader>
             <TableRow>
               <TableHead>Name</TableHead>
@@ -61,7 +60,6 @@ export default function InquiriesPage() {
             ))}
           </TableBody>
         </Table>
-      </div>
     </div>
   );
 }

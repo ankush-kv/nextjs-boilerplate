@@ -9,7 +9,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
 
   return (
     <div className="min-h-screen py-16 px-4">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-3xl rounded-lg bg-card/80 backdrop-blur-sm p-8 shadow-sm ring-1 ring-foreground/10">
         <Button asChild variant="ghost" className="mb-6">
           <Link href="/blogs">&larr; Back to Blogs</Link>
         </Button>

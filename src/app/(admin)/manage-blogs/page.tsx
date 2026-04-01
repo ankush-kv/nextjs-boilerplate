@@ -27,8 +27,7 @@ export default function AdminBlogsPage() {
 
       <Separator />
 
-      <div className="rounded-md border">
-        <Table>
+      <Table>
           <TableHeader>
             <TableRow>
               <TableHead>Title</TableHead>
@@ -63,7 +62,6 @@ export default function AdminBlogsPage() {
             ))}
           </TableBody>
         </Table>
-      </div>
     </div>
   );
 }
