@@ -1,5 +1,12 @@
+import { Navbar } from "@/components/website/navbar";
+import { Footer } from "@/components/website/footer";
+
 export default function WebsiteLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <div>{children}</div>
-  )
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+  );
 }

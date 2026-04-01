@@ -6,8 +6,8 @@ import { Label } from "@/components/ui/label";
 
 export default function VerifyPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center px-4">
-      <Card className="w-full max-w-md">
+    <div className="w-full max-w-md">
+      <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Verify your email</CardTitle>
           <CardDescription>
